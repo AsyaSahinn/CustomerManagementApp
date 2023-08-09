@@ -28,6 +28,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcQWRkTmV3Q3VzdG9tZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/asya/source/repos/CustomerManagement/Views/Customer/GetCustomerDetailByCustomerId.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcR2V0Q3VzdG9tZXJEZXRhaWxCeUN1c3RvbWVySWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/asya/source/repos/CustomerManagement/Views/Customer/GetCustomerList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcR2V0Q3VzdG9tZXJMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

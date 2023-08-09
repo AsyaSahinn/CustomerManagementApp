@@ -20,6 +20,7 @@ namespace CustomerManagement.Controllers
             var result = await _customerRepository.GetAll();
             var customerDTOList = result.Select(customer => new CustomerResponseModel
             {
+                Id= customer.Id,
                 Name = customer.Name,
                 Surname = customer.Surname,
                 Email = customer.Email,
@@ -53,12 +54,34 @@ namespace CustomerManagement.Controllers
                 ViewBag.ErrorMessage = "Model is not valid.";
                 return View();
             }
-            return Ok();
+          
         }
 
         public  IActionResult AddNewCustomer()
         {
             return View();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetCustomerDetailByCustomerId(int customerId)
+        {
+            CustomerRegisterModel registerModel = new();
+            var result = await _customerRepository.GetById(customerId);
+            if (result != null) 
+            {
+               registerModel = new()
+                {
+                    Name = result.Name,
+                    Surname = result.Surname,
+                    Email = result.Email,
+                    PhoneNumber = result.PhoneNumber,
+                    Birthday = result.Birthday ?? null,
+                    Address = result.Address,
+                    Job = result.Job
+                };
+                
+            }
+            return View(registerModel);
         }
     }
 }

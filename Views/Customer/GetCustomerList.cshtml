@@ -25,7 +25,9 @@
                     @foreach (var customer in Model)
                     {
                         <tr>
-                            <td>@customer.Name</td>
+                            <td>
+                                <a asp-controller="Customer" asp-action="GetCustomerDetailByCustomerId" asp-route-customerId="@customer.Id">@customer.Name</a>
+                            </td>
                             <td>@customer.Surname</td>
                             <td>@customer.Email</td>
                             <td>@customer.PhoneNumber</td>
@@ -33,9 +35,8 @@
                     }
                 </tbody>
             </table>
-            <a asp-controller="Customer" asp-action="AddNewCustomer" class="btn btn-primary btn-block">Add New Customer</a>
+            <a asp-controller="Customer" asp-action="AddNewCustomer" class="btn btn-primary btn-block">Yeni Müşteri Ekle</a>
         </div>
-        
     </div>
 </body>
 </html>
