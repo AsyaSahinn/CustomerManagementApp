@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Müşteri Listesi";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">@ViewData["Title"]</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Ad</th>
+                        <th scope="col">Soyad</th>
+                        <th scope="col">E-posta</th>
+                        <th scope="col">Telefon Numarası</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var customer in Model)
+                    {
+                        <tr>
+                            <td>@customer.Name</td>
+                            <td>@customer.Surname</td>
+                            <td>@customer.Email</td>
+                            <td>@customer.PhoneNumber</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <a asp-controller="Customer" asp-action="AddNewCustomer" class="btn btn-primary btn-block">Add New Customer</a>
+        </div>
+        
+    </div>
+</body>
+</html>
