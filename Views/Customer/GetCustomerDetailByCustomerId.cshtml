@@ -2,7 +2,7 @@
 @model CustomerRegisterModel
 
 @{
-    ViewData["Title"] = "Müşteri Detayları";
+    ViewData["Title"] = "Customer Details";
 }
 
 <!DOCTYPE html>
@@ -17,40 +17,45 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Müşteri Bilgileri</h3>
+                        <h3 class="card-title">Customer Details</h3>
                     </div>
                     <div class="card-body">
                         @if (Model != null)
                         {
                             <dl class="row">
-                                <dt class="col-sm-4">Ad:</dt>
+                                <dt class="col-sm-4">Name:</dt>
                                 <dd class="col-sm-8">@Model.Name</dd>
 
-                                <dt class="col-sm-4">Soyad:</dt>
+                                <dt class="col-sm-4">Surname:</dt>
                                 <dd class="col-sm-8">@Model.Surname</dd>
 
-                                <dt class="col-sm-4">E-posta:</dt>
+                                <dt class="col-sm-4">E-Mail:</dt>
                                 <dd class="col-sm-8">@Model.Email</dd>
 
-                                <dt class="col-sm-4">Telefon Numarası:</dt>
+                                <dt class="col-sm-4">Phone Number:</dt>
                                 <dd class="col-sm-8">@Model.PhoneNumber</dd>
 
-                                <dt class="col-sm-4">Doğum Tarihi:</dt>
+                                <dt class="col-sm-4">Birthday:</dt>
                                 <dd class="col-sm-8">
                                     @(Model.Birthday.HasValue ? Model.Birthday.Value.ToShortDateString() : "-")
                                 </dd>
 
-                                <dt class="col-sm-4">Adres:</dt>
+                                <dt class="col-sm-4">Address:</dt>
                                 <dd class="col-sm-8">@Model.Address</dd>
 
-                                <dt class="col-sm-4">Meslek:</dt>
+                                <dt class="col-sm-4">Job:</dt>
                                 <dd class="col-sm-8">@Model.Job</dd>
                             </dl>
+
+                            <div class="d-flex justify-content-center">
+                                <a href="@Url.Action("GetCustomerList", "Customer")" class="btn btn-primary">View Customer List</a>
+                            </div>
+
                         }
                         else
                         {
                             <div class="alert alert-danger">
-                                Müşteri bulunamadı.
+                                Customer not found.
                             </div>
                         }
                     </div>

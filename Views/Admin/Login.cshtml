@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admin Girişi</title>
+    <title>Admin Login Page</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">
-                        <h2 class="text-center">Admin Girişi</h2>
+                        <h2 class="text-center">Admin Login</h2>
                     </div>
                     <div class="card-body">
                         @if (ViewBag.ErrorMessage != null)
@@ -24,14 +24,14 @@
                         }
                         <form asp-action="Login" method="post">
                             <div class="form-group">
-                                <label for="UserName">Kullanıcı Adı:</label>
+                                <label for="UserName">User Name:</label>
                                 <input type="text" class="form-control" id="UserName" name="UserName" required>
                             </div>
                             <div class="form-group">
-                                <label for="UserPassword">Şifre:</label>
+                                <label for="UserPassword">Password:</label>
                                 <input type="password" class="form-control" id="UserPassword" name="UserPassword" required>
                             </div>
-                            <button type="submit" class="btn btn-primary btn-block">Giriş Yap</button>
+                            <button type="submit" class="btn btn-primary btn-block">Login</button>
                         </form>
                     </div>
                 </div>

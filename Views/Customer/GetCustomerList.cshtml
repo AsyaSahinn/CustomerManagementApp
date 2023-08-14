@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Müşteri Listesi";
+    ViewData["Title"] = "Customer List";
 }
 
 <!DOCTYPE html>
@@ -15,10 +15,10 @@
             <table class="table table-bordered table-striped">
                 <thead class="thead-dark">
                     <tr>
-                        <th scope="col">Ad</th>
-                        <th scope="col">Soyad</th>
-                        <th scope="col">E-posta</th>
-                        <th scope="col">Telefon Numarası</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Surname</th>
+                        <th scope="col">E-Mail</th>
+                        <th scope="col">Phone Number</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -35,7 +35,11 @@
                     }
                 </tbody>
             </table>
-            <a asp-controller="Customer" asp-action="AddNewCustomer" class="btn btn-primary btn-block">Yeni Müşteri Ekle</a>
+            <a asp-controller="Customer" asp-action="AddNewCustomer" class="btn btn-primary btn-block mb-3">Add New Customer</a>
+
+            <div class="d-flex justify-content-center">
+                <a asp-controller="Admin" asp-action="Login" class="btn btn-success btn-block">Logout</a>
+            </div>
         </div>
     </div>
 </body>
