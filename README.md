@@ -33,10 +33,10 @@ Uygulama başlatıldığında, Admin Girişi ekranı açılır. Doğru kullanıc
 
 - Müşteri Listesi sayfasında herhangi bir müşteri adına tıklayarak müşterinin detaylarını görüntüleyebilirsiniz.
 
-## Katkıda Bulunma
+# Kullanılan Teknolojiler
 
-Pull talepleri ve geri bildirimler her zaman hoş karşılanır. Büyük değişiklikler yapmadan önce lütfen tartışma bölümünde konuyu açın.
+Bu proje aşağıdaki teknolojileri kullanmaktadır:
 
-## Lisans
-
-Bu proje MIT Lisansı altında lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasını inceleyebilirsiniz.
+- ASP.NET Core MVC
+- Entity Framework Core
+- HTML, CSS, JavaScript
