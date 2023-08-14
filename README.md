@@ -33,7 +33,7 @@ Uygulama başlatıldığında, Admin Girişi ekranı açılır. Doğru kullanıc
 
 - Müşteri Listesi sayfasında herhangi bir müşteri adına tıklayarak müşterinin detaylarını görüntüleyebilirsiniz.
 
-# Kullanılan Teknolojiler
+### Kullanılan Teknolojiler
 
 Bu proje aşağıdaki teknolojileri kullanmaktadır:
 
