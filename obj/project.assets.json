@@ -3896,11 +3896,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\asya\\source\\repos\\CustomerManagement\\CustomerManagement.csproj",
+      "projectUniqueName": "C:\\Users\\asya\\Desktop\\denem\\CustomerManagementApp\\CustomerManagement.csproj",
       "projectName": "CustomerManagement",
-      "projectPath": "C:\\Users\\asya\\source\\repos\\CustomerManagement\\CustomerManagement.csproj",
+      "projectPath": "C:\\Users\\asya\\Desktop\\denem\\CustomerManagementApp\\CustomerManagement.csproj",
       "packagesPath": "C:\\Users\\asya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\asya\\source\\repos\\CustomerManagement\\obj\\",
+      "outputPath": "C:\\Users\\asya\\Desktop\\denem\\CustomerManagementApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\asya\\AppData\\Roaming\\NuGet\\NuGet.Config",

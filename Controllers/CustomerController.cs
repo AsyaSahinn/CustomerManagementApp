@@ -5,22 +5,26 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CustomerManagement.Controllers
 {
+    // Müşteri işlemlerini yönetmek için kullanılan Controller sınıfı.
     public class CustomerController : Controller
     {
         private readonly ICustomerRepository _customerRepository;
 
+        // Constructor, dependency injection ile ICustomerRepository tipinde bir nesne alır.
         public CustomerController(ICustomerRepository customerRepository)
         {
             _customerRepository = customerRepository;
         }
 
+        // HTTP GET isteğiyle tetiklenen method.
+        // Tüm müşterileri listeler ve bu bilgileri CustomerResponseModel tipine dönüştürüp görüntüler.
         [HttpGet]
         public async Task<IActionResult> GetCustomerList()
         {
             var result = await _customerRepository.GetAll();
             var customerDTOList = result.Select(customer => new CustomerResponseModel
             {
-                Id= customer.Id,
+                Id = customer.Id,
                 Name = customer.Name,
                 Surname = customer.Surname,
                 Email = customer.Email,
@@ -30,46 +34,59 @@ namespace CustomerManagement.Controllers
             return View(customerDTOList);
         }
 
-        [HttpPost]   
+        // HTTP POST isteğiyle tetiklenen method.
+        // Yeni bir müşteri ekler.
+        [HttpPost]
         public async Task<IActionResult> AddNewCustomer(CustomerRegisterModel model)
         {
             if (ModelState.IsValid)
             {
+                // Modelin geçerli olup olmadığı kontrol edilir.
+                // Eğer geçerli ise, gelen veriler kullanılarak yeni bir Customer nesnesi oluşturulur.
                 Customer customer = new()
                 {
-                    Name= model.Name,
+                    Name = model.Name,
                     Surname = model.Surname,
                     Email = model.Email,
                     PhoneNumber = model.PhoneNumber,
-                    Birthday=model.Birthday,
-                    Address=model.Address,
-                    Job=model.Job
+                    Birthday = model.Birthday,
+                    Address = model.Address,
+                    Job = model.Job
                 };
-                
+
+                // Oluşturulan müşteri verisi _customerRepository üzerinden eklenir.
                 await _customerRepository.Create(customer);
+
+                // İşlem başarılı ise müşteri listesine yönlendirilir.
                 return RedirectToAction("GetCustomerList", "Customer");
             }
             else
             {
+                // Eğer model geçerli değilse, hata mesajıyla birlikte aynı sayfaya dönülür.
                 ViewBag.ErrorMessage = "Model is not valid.";
                 return View();
             }
-          
         }
 
-        public  IActionResult AddNewCustomer()
+        // HTTP GET isteğiyle tetiklenen method.
+        // Yeni müşteri eklemek için kullanılan sayfayı görüntüler.
+        public IActionResult AddNewCustomer()
         {
             return View();
         }
 
+        // HTTP GET isteğiyle tetiklenen method.
+        // Belirli bir müşterinin detaylarını görüntüler.
         [HttpGet]
         public async Task<IActionResult> GetCustomerDetailByCustomerId(int customerId)
         {
+            // Veri tabanından belirli bir müşteriye ait bilgiler alınır.
             CustomerRegisterModel registerModel = new();
             var result = await _customerRepository.GetById(customerId);
-            if (result != null) 
+            if (result != null)
             {
-               registerModel = new()
+                // Eğer müşteri varsa, bu bilgiler CustomerRegisterModel tipine dönüştürülür.
+                registerModel = new()
                 {
                     Name = result.Name,
                     Surname = result.Surname,
@@ -79,8 +96,9 @@ namespace CustomerManagement.Controllers
                     Address = result.Address,
                     Job = result.Job
                 };
-                
             }
+
+            // Dönüştürülen bilgiler müşteri detaylarını gösteren sayfada görüntülenir.
             return View(registerModel);
         }
     }
