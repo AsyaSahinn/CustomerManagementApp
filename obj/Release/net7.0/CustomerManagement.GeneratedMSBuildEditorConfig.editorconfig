@@ -9,49 +9,49 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CustomerManagement
 build_property.RootNamespace = CustomerManagement
-build_property.ProjectDir = C:\Users\asya\Desktop\denem\CustomerManagementApp\
+build_property.ProjectDir = C:\Users\asya\Desktop\CustomerManagementApp\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\asya\Desktop\denem\CustomerManagementApp
+build_property.MSBuildProjectDirectory = C:\Users\asya\Desktop\CustomerManagementApp
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/asya/Desktop/denem/CustomerManagementApp/Views/Admin/Login.cshtml]
+[C:/Users/asya/Desktop/CustomerManagementApp/Views/Admin/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asya/Desktop/denem/CustomerManagementApp/Views/Customer.cshtml]
+[C:/Users/asya/Desktop/CustomerManagementApp/Views/Customer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asya/Desktop/denem/CustomerManagementApp/Views/Customer/AddNewCustomer.cshtml]
+[C:/Users/asya/Desktop/CustomerManagementApp/Views/Customer/AddNewCustomer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcQWRkTmV3Q3VzdG9tZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asya/Desktop/denem/CustomerManagementApp/Views/Customer/GetCustomerDetailByCustomerId.cshtml]
+[C:/Users/asya/Desktop/CustomerManagementApp/Views/Customer/GetCustomerDetailByCustomerId.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcR2V0Q3VzdG9tZXJEZXRhaWxCeUN1c3RvbWVySWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asya/Desktop/denem/CustomerManagementApp/Views/Customer/GetCustomerList.cshtml]
+[C:/Users/asya/Desktop/CustomerManagementApp/Views/Customer/GetCustomerList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcR2V0Q3VzdG9tZXJMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asya/Desktop/denem/CustomerManagementApp/Views/Shared/Error.cshtml]
+[C:/Users/asya/Desktop/CustomerManagementApp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asya/Desktop/denem/CustomerManagementApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/asya/Desktop/CustomerManagementApp/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asya/Desktop/denem/CustomerManagementApp/Views/_ViewImports.cshtml]
+[C:/Users/asya/Desktop/CustomerManagementApp/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asya/Desktop/denem/CustomerManagementApp/Views/_ViewStart.cshtml]
+[C:/Users/asya/Desktop/CustomerManagementApp/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asya/Desktop/denem/CustomerManagementApp/Views/Shared/_Layout.cshtml]
+[C:/Users/asya/Desktop/CustomerManagementApp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-81kcow3ilx

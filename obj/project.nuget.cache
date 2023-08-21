@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EQIdMVPiaP51IjwugQxnjvotJZAzdUWsfapTAPU5vQmsGjH1sSaVJ25KerSFpXnDnC5D9jefScoxwibILENwuw==",
+  "dgSpecHash": "EiVKqfU2peoZ+iy+hx+2MvsV3+fGkmdVCuLJN7rbU2lKiet+FoLR+pLm+33BkCCUrzPBM+XjdQLdwV7+O4NTmw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\asya\\Desktop\\denem\\CustomerManagementApp\\CustomerManagement.csproj",
+  "projectFilePath": "C:\\Users\\asya\\Desktop\\CustomerManagementApp\\CustomerManagement.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\asya\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\asya\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

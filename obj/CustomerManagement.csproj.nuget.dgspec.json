@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\asya\\Desktop\\denem\\CustomerManagementApp\\CustomerManagement.csproj": {}
+    "C:\\Users\\asya\\Desktop\\CustomerManagementApp\\CustomerManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\asya\\Desktop\\denem\\CustomerManagementApp\\CustomerManagement.csproj": {
+    "C:\\Users\\asya\\Desktop\\CustomerManagementApp\\CustomerManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\asya\\Desktop\\denem\\CustomerManagementApp\\CustomerManagement.csproj",
+        "projectUniqueName": "C:\\Users\\asya\\Desktop\\CustomerManagementApp\\CustomerManagement.csproj",
         "projectName": "CustomerManagement",
-        "projectPath": "C:\\Users\\asya\\Desktop\\denem\\CustomerManagementApp\\CustomerManagement.csproj",
+        "projectPath": "C:\\Users\\asya\\Desktop\\CustomerManagementApp\\CustomerManagement.csproj",
         "packagesPath": "C:\\Users\\asya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\asya\\Desktop\\denem\\CustomerManagementApp\\obj\\",
+        "outputPath": "C:\\Users\\asya\\Desktop\\CustomerManagementApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\asya\\AppData\\Roaming\\NuGet\\NuGet.Config",
