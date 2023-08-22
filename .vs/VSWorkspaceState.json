@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Controllers",
     "\\Views",
     "\\Views\\Customer"
   ],
-  "SelectedNode": "\\CustomerManagement.sln",
+  "SelectedNode": "\\Controllers\\AdminController.cs",
   "PreviewInSolutionExplorer": false
 }
