@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  web_api:
+    image: test  
+    container_name: api
+    ports:
+      - "4545:80"
+    build:
+       context: .
+       dockerfile: ./Dockerfile  
+  sql:
+     image: "mcr.microsoft.com/mssql/server:2019-latest"
+     container_name: mssql
+     ports:
+      - "1433:1433" 
+     environment:
+      - ACCEPT_EULA=y
+      - MSSQL_SA_PASSWORD=root.ROOT
+     volumes:
+      - sql_data:/var/opt/mssql
+
+volumes:
+   sql_data:
