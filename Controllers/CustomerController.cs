@@ -1,7 +1,10 @@
-﻿using CustomerManagement.DAL.Abstract;
+﻿using CustomerManagement.BackgroundJob;
+using CustomerManagement.DAL.Abstract;
 using CustomerManagement.Models.DTO;
 using CustomerManagement.Models.Entity;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using StackExchange.Redis;
 
 namespace CustomerManagement.Controllers
 {
@@ -9,20 +12,30 @@ namespace CustomerManagement.Controllers
     public class CustomerController : Controller
     {
         private readonly ICustomerRepository _customerRepository;
+        private readonly IDatabase _redis;
+        private readonly IBackgroundJob _job;
 
-        // Constructor, dependency injection ile ICustomerRepository tipinde bir nesne alır.
-        public CustomerController(ICustomerRepository customerRepository)
+        public CustomerController(ICustomerRepository customerRepository, IConnectionMultiplexer redis, IBackgroundJob job)
         {
             _customerRepository = customerRepository;
+            _redis = redis.GetDatabase();
+            _job = job;
         }
+
+        // Constructor, dependency injection ile ICustomerRepository ve IConnectionMultiplexer tipinde bir nesne alır.
+
+
+
+
 
         // HTTP GET isteğiyle tetiklenen method.
         // Tüm müşterileri listeler ve bu bilgileri CustomerResponseModel tipine dönüştürüp görüntüler.
         [HttpGet]
         public async Task<IActionResult> GetCustomerList()
         {
-            var result = await _customerRepository.GetAll();
-            var customerDTOList = result.Select(customer => new CustomerResponseModel
+            var result = await _redis.StringGetAsync("user");
+            var allCustomerData = JsonConvert.DeserializeObject<List<Customer>>(result);
+            var customerDTOList =allCustomerData.Select(customer => new CustomerResponseModel
             {
                 Id = customer.Id,
                 Name = customer.Name,
@@ -31,7 +44,7 @@ namespace CustomerManagement.Controllers
                 PhoneNumber = customer.PhoneNumber
             }).ToList();
 
-            return View(customerDTOList);
+            return View(allCustomerData);
         }
 
         // HTTP POST isteğiyle tetiklenen method.
@@ -56,7 +69,7 @@ namespace CustomerManagement.Controllers
 
                 // Oluşturulan müşteri verisi _customerRepository üzerinden eklenir.
                 await _customerRepository.Create(customer);
-
+                await _job.UserCache();
                 // İşlem başarılı ise müşteri listesine yönlendirilir.
                 return RedirectToAction("GetCustomerList", "Customer");
             }
